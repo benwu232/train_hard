@@ -13,7 +13,7 @@ After downloding the file, please extract it in the train_hard directory and run
 Here is my problem:
 When training, I always got nan in loss in first several epochs, even I set lr = 1e-4. 
 I don't know why. Is there any black magic in training deep neural network? 
-Please give me some advicees. Since I am new in this area, any advice is welcome.
+Please give me some advices. Since I am new in this area, any advice is welcome.
 
 Thanks in advance!
 
