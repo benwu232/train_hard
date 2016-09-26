@@ -7,6 +7,10 @@ I use some real stock market data as my exercise.
 You can download the data from https://drive.google.com/file/d/0B3zSzVUgsG-FNTliNFl2a2t5dzQ/view?usp=sharing
 
 It is more than 600M bytes. 
+The training data is very unblanced: 
+0: No action, 90%
+1: Buy, 5.5%
+2: Sell, 4.5%
 
 After downloding the file, please extract it in the train_hard directory and run the train.py.
 
