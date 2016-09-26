@@ -18,11 +18,17 @@ Please give me some advicees. Since I am new in this area, any advice is welcome
 Thanks in advance!
 
 Here is the training process.
+
 Train on 412297 samples, validate on 333981 samples
+
 Epoch 1/10
+
 126s - loss: nan - acc: 0.6683 - val_loss: 0.0000e+00 - val_acc: 0.9018
+
 Epoch 2/10
+
 70s - loss: 0.0000e+00 - acc: 0.8968 - val_loss: 0.0000e+00 - val_acc: 0.9018
+
 Epoch 3/10
+
 69s - loss: 0.0000e+00 - acc: 0.8968 - val_loss: 0.0000e+00 - val_acc: 0.9018
-Epoch 4/10
