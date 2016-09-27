@@ -18,9 +18,9 @@ The training data is very unblanced:
 
 The shape of the data is like this (412297, 1, 2, 128)
 
-First one is number of samples.
+First one(4122297) is number of samples.
 
-The second one is 1, is for using convolution2d.
+The second one(1), is for using convolution2d (I'd like to think about the data as a image).
 
 (2, 128) means close price and volume as two rows, which as 128 values respectively. It is actually two sequence with 128 days' close price and volume.
 
