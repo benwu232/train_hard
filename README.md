@@ -16,6 +16,14 @@ The training data is very unblanced:
 
 2: Sell, 4.5%
 
+The shape of the data is like this (412297, 1, 2, 128)
+
+First one is number of samples.
+
+The second one is 1, is for using convolution2d.
+
+(2, 128) means close price and volume as two rows, which as 128 values respectively. It is actually two sequence with 128 days' close price and volume.
+
 After downloding the file, please extract it in the train_hard directory and run the train.py.
 
 Here is my problem:
