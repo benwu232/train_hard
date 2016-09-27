@@ -22,7 +22,7 @@ First one(4122297) is number of samples.
 
 The second one(1), is for using convolution2d (I'd like to think about the data as a image).
 
-(2, 128) means close price and volume as two rows, which as 128 values respectively. It is actually two sequence with 128 days' close price and volume.
+(2, 128) means close price and volume as two rows, which as 128 values respectively. It is actually two sequence with 128 days' close price and volume. The equation new_v = log(1+v) is applied to the volume row to make it smaller and smoother. It is said this can help train the neural network, but I didn't see that:(. The common normalization(subtracted by mean and divided by standard division) algorithm is applied in each row to make them zero mean and symmetric.
 
 After downloding the file, please extract it in the train_hard directory and run the train.py.
 
