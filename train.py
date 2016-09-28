@@ -36,13 +36,16 @@ def defnet1(nb_filter_base = 64, nb_mid_blk = 1):
     init_type = 'he_uniform'
 
     model = Sequential()
-    model.add(Convolution2D(nb_filter_base, 2, 3, init=init_type, activation=act_type, input_shape=(1, 2, input_dim), border_mode='valid', name=prefix+'conv_input'))
+    model.add(Convolution2D(nb_filter_base, 2, 3, init=init_type, activation=act_type,
+                            input_shape=(1, 2, input_dim), border_mode='valid', name=prefix+'conv_input'))
     model.add(Dropout(0.5))
 
     for k in range(nb_mid_blk):
         nb_filter = nb_filter_base * (2**k)
-        model.add(Convolution2D(nb_filter, 1, 3, init=init_type, activation=act_type, border_mode='same', name=prefix+'conv{}_1'.format(k+1)))
-        model.add(Convolution2D(nb_filter, 1, 3, init=init_type, activation=act_type, border_mode='same', name=prefix+'conv{}_2'.format(k+1)))
+        model.add(Convolution2D(nb_filter, 1, 3, init=init_type, activation=act_type,
+                                border_mode='same', name=prefix+'conv{}_1'.format(k+1)))
+        model.add(Convolution2D(nb_filter, 1, 3, init=init_type, activation=act_type,
+                                border_mode='same', name=prefix+'conv{}_2'.format(k+1)))
         model.add(AveragePooling2D((1,2), strides=(1,2), name=prefix+'pool{}'.format(k+1)))
         model.add(Dropout(0.5))
 
@@ -56,7 +59,7 @@ def defnet1(nb_filter_base = 64, nb_mid_blk = 1):
 
     optimizer = Adam()
     optimizer = Adadelta()
-    optimizer = SGD(lr=1e-2, decay=1e-4, momentum=0.9, nesterov=True)
+    optimizer = SGD(lr=1e-4, decay=1e-4, momentum=0.9, nesterov=True)
     model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics=['accuracy'])
     print(model.summary())
 
